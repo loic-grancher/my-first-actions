@@ -40,4 +40,7 @@ jobs:
 
             - name: Print variable
               run: echo "${{env.MY_VARIABLE}}"
+
+            - name: Try to print secret
+              run: echo "${{secrets.MY_SECRET}}"
               
