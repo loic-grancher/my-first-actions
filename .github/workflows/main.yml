@@ -49,4 +49,10 @@ jobs:
 
             - name: display file created with bash script
               run: cat hello.txt
+
+            - name: install dependencies
+              run: npm install
+
+            - name: run tests
+              run: npm test
               

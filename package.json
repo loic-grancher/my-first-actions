@@ -1,0 +1,23 @@
+{
+  "name": "my-first-actions",
+  "version": "1.0.0",
+  "description": "- Exercice 1 completed - Exercice 2 completed - Exercice 3 completed - Exercice 4 completed",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loic-grancher/my-first-actions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loic-grancher/my-first-actions/issues"
+  },
+  "homepage": "https://github.com/loic-grancher/my-first-actions#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
