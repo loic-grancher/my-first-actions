@@ -37,6 +37,9 @@ jobs:
             #       echo test, and deploy your project.
             - name: Say hello
               run: echo Hello github Actions
+            
+            - name: install dependencies
+              run: npm install
 
             - name: run tests
               run: npm test
