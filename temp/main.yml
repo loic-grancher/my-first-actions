@@ -38,10 +38,36 @@ jobs:
             - name: Say hello
               run: echo Hello github Actions
 
+            - name: Print variable
+              run: echo "${{env.MY_VARIABLE}}"
+
+            - name: Try to print secret
+              run: echo "${{secrets.MY_SECRET}}"
+
+            - name: Run bash script
+              run: bash hello.sh
+
+            - name: display file created with bash script
+              run: cat hello.txt
+
+            - name: install dependencies
+              run: npm install
+
             - name: run tests
               run: npm test
-
-            - name: run linter
-              run: npm run lint
        # This workflow contains a single job called "build"
 
+
+    second-job:
+        needs: build
+        if: ${{ needs.build.result == 'success' }}
+        # The type of runner that the job will run on
+        runs-on: ubuntu-latest
+
+        # Steps represent a sequence of tasks that will be executed as part of the job
+        steps:
+            # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+            - uses: actions/checkout@v4
+
+            - name: confirm isRunning
+              run: echo Second job running
